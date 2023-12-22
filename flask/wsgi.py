@@ -7,10 +7,10 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():
-    return "<p>hello world</p>"
+def index():
+    return "<p>this is the index page</p>"
 
 
-@app.route('/<name>')
+@app.route('/<path:name>')
 def say_name(name):
     return f"<p>hello {escape(name)}</p>"
